@@ -1,4 +1,5 @@
 @import './variables.css';
+@import './theme.css';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 *, *::before, *::after {
@@ -15,8 +16,8 @@ html {
 body {
   font-family: var(--font-family);
   line-height: 1.6;
-  color: var(--text-primary);
-  background-color: var(--background-main);
+  color: var(--color-text-primary);
+  background-color: var(--color-background-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -25,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: var(--heading-weight);
   line-height: 1.2;
   margin-bottom: var(--spacing-md);
-  color: var(--text-primary);
+  color: var(--color-text-primary);
 }
 
 h1 {
@@ -57,13 +58,13 @@ p {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--color-accent);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 a:hover {
-  color: var(--primary-dark);
+  color: var(--color-button-hover);
 }
 
 img {
@@ -75,8 +76,8 @@ img {
 button, .button {
   cursor: pointer;
   display: inline-block;
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
   font-weight: var(--body-weight-medium);
   padding: 0.75rem 1.5rem;
   border: none;
@@ -88,12 +89,12 @@ button, .button {
 }
 
 button:hover, .button:hover {
-  background-color: var(--primary-dark);
+  background-color: var(--color-button-hover);
   transform: translateY(-2px);
 }
 
 button:disabled, .button:disabled {
-  background-color: var(--text-light);
+  background-color: var(--color-text-secondary);
   cursor: not-allowed;
   transform: none;
 }
@@ -123,15 +124,15 @@ li {
 }
 
 .accent-text {
-  color: var(--accent-color);
+  color: var(--color-accent);
 }
 
 .primary-text {
-  color: var(--primary-color);
+  color: var(--color-accent);
 }
 
 .secondary-text {
-  color: var(--secondary-color);
+  color: var(--color-text-secondary);
 }
 
 /* Responsive adjustments */

@@ -1,0 +1,86 @@
+:root {
+  /* Fonts */
+  --font-title: "Inter-Variable", sans-serif;
+  --font-body: "Inter", sans-serif;
+  
+  /* Background Colors */
+  --color-background-primary: #0F0F10;
+  --color-background-secondary: #1A1B1F;
+  
+  /* Text Colors */
+  --color-text-primary: #E5E7EB;
+  --color-text-secondary: #9CA3AF;
+  
+  /* Accent Colors */
+  --color-accent: #3B82F680; /* 50% opacity electric blue */
+  --color-accent-solid: #3B82F6; /* Solid version for buttons */
+  
+  /* Border Colors */
+  --color-border: rgba(156, 163, 175, 0.2);
+  
+  /* Shadow Colors */
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  
+  /* Button States */
+  --color-button-hover: rgba(59, 130, 246, 0.8);
+  --color-button-active: rgba(59, 130, 246, 0.6);
+  
+  /* Card Background */
+  --color-card-bg: var(--color-background-secondary);
+  
+  /* Input Fields */
+  --color-input-bg: var(--color-background-secondary);
+  --color-input-border: var(--color-border);
+  --color-input-text: var(--color-text-primary);
+  --color-input-placeholder: var(--color-text-secondary);
+}
+
+/* Dark mode specific styles */
+body {
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+}
+
+/* Text styles */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-primary);
+}
+
+p, span, div {
+  color: var(--color-text-primary);
+}
+
+/* Links and buttons */
+a {
+  color: var(--color-accent);
+}
+
+button {
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
+}
+
+button:hover {
+  background-color: var(--color-button-hover);
+}
+
+button:active {
+  background-color: var(--color-button-active);
+}
+
+/* Cards and containers */
+.card, .container {
+  background-color: var(--color-card-bg);
+  border-color: var(--color-border);
+}
+
+/* Form elements */
+input, textarea, select {
+  background-color: var(--color-input-bg);
+  border-color: var(--color-input-border);
+  color: var(--color-input-text);
+}
+
+input::placeholder {
+  color: var(--color-input-placeholder);
+} 
