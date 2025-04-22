@@ -39,8 +39,7 @@ const Footer = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.6 }}
-          >
-            <h3>Quick Links</h3>
+          >            <h3>Quick Links</h3>
             <ul>
               <li><a href="#features">Features</a></li>
               <li><a href="#process">How It Works</a></li>

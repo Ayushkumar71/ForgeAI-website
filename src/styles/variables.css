@@ -1,36 +1,96 @@
 :root {
   /* Typography */
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --heading-weight: 700;
-  --body-weight: 400;
+  --font-title: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --heading-weight-black: 900;
+  --heading-weight-bold: 800;
+  --heading-weight-semi: 700;
+  --body-weight-bold: 600;
   --body-weight-medium: 500;
+  --body-weight-regular: 400;
   
-  /* Spacing */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-xxl: 3rem;
-  --spacing-xxxl: 5rem;
+  /* Colors - Dark Theme */
+  --color-background-primary: #0F0F10;
+  --color-background-secondary: #13141A;
+  --color-background-tertiary: #1A1B23;
+  --color-background-card: #1E1F2A;
+  --color-text-primary: #F2F3F5;
+  --color-text-secondary: #B7BCCD;
+  --color-text-tertiary: #8A90A8;
+  
+  /* Accent Colors */
+  --color-accent-primary: #3B82F6;
+  --color-accent-primary-light: rgba(59, 130, 246, 0.8);
+  --color-accent-primary-dark: #2563EB;
+  --color-accent-secondary: #10B981;
+  --color-positive: #10B981;
+  --color-negative: #EF4444;
+  --color-warning: #F59E0B;
+  --color-info: #3B82F6;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-primary-dark));
+  --gradient-primary-hover: linear-gradient(135deg, var(--color-accent-primary-dark), var(--color-accent-primary));
+  --gradient-blue-subtle: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.1));
+  --gradient-text: linear-gradient(to right, var(--color-text-primary), var(--color-accent-primary));
+  --gradient-background: radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 50%), 
+                         radial-gradient(circle at 70% 60%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+  
+  /* Spacing - Using 4px base unit */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-20: 5rem;    /* 80px */
+  --space-24: 6rem;    /* 96px */
+  --space-32: 8rem;    /* 128px */
+  --space-40: 10rem;   /* 160px */
   
   /* Borders & Shadows */
-  --border-radius-sm: 4px;
-  --border-radius-md: 8px;
-  --border-radius-lg: 12px;
-  --border-radius-xl: 24px;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  --border-radius-2xl: 1.5rem;
+  --border-radius-full: 9999px;
   
-  /* Transitions */
-  --transition-fast: 0.15s ease;
-  --transition-normal: 0.3s ease;
-  --transition-slow: 0.5s ease;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.3), 0 3px 6px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.2);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-button: 0 4px 10px rgba(59, 130, 246, 0.3);
+  --shadow-button-hover: 0 6px 20px rgba(59, 130, 246, 0.4);
   
-  /* Container Widths */
+  /* Transitions & Animations */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  --animation-bounce: bounce 1s infinite;
+  --animation-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animation-spin: spin 1s linear infinite;
+  
+  /* Container Dimensions */
   --container-sm: 640px;
   --container-md: 768px;
   --container-lg: 1024px;
-  --container-xl: 1280px;
+  --container-xl: 1200px;
+  --container-2xl: 1400px;
+  
+  /* Z-Index Layers */
+  --z-negative: -1;
+  --z-low: 10;
+  --z-medium: 20;
+  --z-high: 30;
+  --z-nav: 100;
+  --z-modal: 200;
+  --z-toast: 300;
 } 

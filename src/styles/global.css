@@ -1,6 +1,6 @@
 @import './variables.css';
 @import './theme.css';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -14,15 +14,17 @@ html {
 }
 
 body {
-  font-family: var(--font-family);
+  font-family: var(--font-body);
   line-height: 1.6;
   color: var(--color-text-primary);
   background-color: var(--color-background-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
   font-weight: var(--heading-weight);
   line-height: 1.2;
   margin-bottom: var(--spacing-md);
@@ -30,15 +32,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 h3 {
   font-size: 1.75rem;
+  font-weight: 700;
 }
 
 h4 {
@@ -55,12 +62,13 @@ h6 {
 
 p {
   margin-bottom: var(--spacing-md);
+  color: var(--color-text-secondary);
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--color-accent-solid);
   text-decoration: none;
-  transition: color var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
 a:hover {
@@ -76,38 +84,46 @@ img {
 button, .button {
   cursor: pointer;
   display: inline-block;
-  background-color: var(--color-accent);
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-solid),
+    var(--color-button-hover)
+  );
   color: var(--color-text-primary);
-  font-weight: var(--body-weight-medium);
+  font-weight: 600;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: var(--border-radius-md);
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
-  font-family: var(--font-family);
+  transition: all var(--transition-fast);
+  font-family: var(--font-body);
   font-size: 1rem;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
 }
 
 button:hover, .button:hover {
-  background-color: var(--color-button-hover);
   transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.4);
 }
 
 button:disabled, .button:disabled {
-  background-color: var(--color-text-secondary);
+  background: rgba(156, 163, 175, 0.2);
+  color: rgba(156, 163, 175, 0.5);
   cursor: not-allowed;
   transform: none;
+  box-shadow: none;
 }
 
 .container {
   width: 100%;
-  max-width: var(--container-xl);
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--spacing-lg);
+  padding: 0 2rem;
 }
 
 .section {
-  padding: var(--spacing-xxl) 0;
+  padding: 100px 0;
+  position: relative;
 }
 
 ul {
@@ -117,6 +133,7 @@ ul {
 
 li {
   margin-bottom: var(--spacing-sm);
+  color: var(--color-text-secondary);
 }
 
 .text-center {
@@ -124,28 +141,79 @@ li {
 }
 
 .accent-text {
-  color: var(--color-accent);
+  color: var(--color-accent-solid);
 }
 
 .primary-text {
-  color: var(--color-accent);
+  color: var(--color-text-primary);
 }
 
 .secondary-text {
   color: var(--color-text-secondary);
 }
 
+/* Gradients and effects */
+.text-gradient {
+  background: linear-gradient(to right, var(--color-text-primary), var(--color-accent-solid));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.blur-backdrop {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 /* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 2.75rem;
+  }
+  
+  h2 {
+    font-size: 2.25rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .section {
+    padding: 70px 0;
+  }
+  
+  h1 {
+    font-size: 2.25rem;
+  }
+  
+  h2 {
+    font-size: 1.875rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
   html {
     font-size: 14px;
   }
   
   .container {
-    padding: 0 var(--spacing-md);
+    padding: 0 1rem;
   }
   
-  .section {
-    padding: var(--spacing-xl) 0;
+  h1 {
+    font-size: 2rem;
   }
 } 
