@@ -113,25 +113,6 @@ const Comparison = () => {
             </motion.ul>
           </motion.div>
         </div>
-
-        <motion.div 
-          className="comparison-cta"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.5 }}
-        >
-          <h2 className="cta-heading">
-            Do You Want To Experience Freedom in Business Growth?
-          </h2>
-          <h3 className="cta-subheading">
-            Then Book a demo to see the AI Follow up System in action
-          </h3>
-          <a href="#booking" className="cta-button">
-            Book Live Demo »
-          </a>
-          <p className="cta-note">Get Started In Less Than 60 Seconds • Cancel Anytime</p>
-        </motion.div>
       </div>
     </section>
   );

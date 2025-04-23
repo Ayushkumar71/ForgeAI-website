@@ -77,7 +77,7 @@ const Navbar = () => {
 
         <motion.a 
           href="#booking" 
-          className="navbar-cta"
+          className="navbar-cta btn btn-primary"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ 

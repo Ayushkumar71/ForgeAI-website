@@ -72,7 +72,7 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.5 }}
           >
             <img 
-              src="/images/dental-ai-assistant.png" 
+              src="/images/DentinaCard.jpeg" 
               alt="AI Dental Assistant" 
               onError={(e) => {
                 e.target.onerror = null;
