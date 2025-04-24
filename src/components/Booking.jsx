@@ -1,62 +1,70 @@
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const Booking = () => {
+  useEffect(() => {
+    // Initialize Calendly widget when component mounts
+    const script = document.createElement('script');
+    script.innerHTML = `
+      window.onload = function() {
+        Calendly.initInlineWidget({
+          url: 'https://calendly.com/forge-ai/demo',
+          parentElement: document.querySelector('.calendly-inline-widget'),
+          prefill: {},
+          utm: {}
+        });
+      };
+    `;
+    document.body.appendChild(script);
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
-    <section className="cta section" id="booking">
+    <section id="booking" className="booking">
       <div className="container">
         <motion.div 
-          className="cta-container"
-          initial={{ opacity: 0, y: 30 }}
+          className="booking-content"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ 
-            type: "spring", 
-            stiffness: 60, 
-            damping: 12 
-          }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
         >
           <motion.h2 
-            className="cta-title"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-          >
-            Ready to Transform Your Dental Practice?
-          </motion.h2>
-          <motion.p 
-            className="cta-text"
+            className="booking-title"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.6 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
           >
-            Book your free discovery call today and let's discuss how AI automation can streamline your operations, reduce administrative burden, and improve patient experience.
-          </motion.p>
+            Ready to<br/>
+            <span className="highlight">Revolutionize</span> Your<br/>
+            Dental Practice <span className="highlight">with AI?</span>
+          </motion.h2>
           
-          <motion.div 
-            className="calendar-widget"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+          <motion.p 
+            className="booking-subtitle"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.6, duration: 0.5 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
           >
-            {/* This would be replaced with an actual Calendly embed */}
-            <p style={{ textAlign: 'center', padding: '2rem 0' }}>
-              Calendly booking widget will be embedded here. For implementation, use the Calendly embed code or React component.
-            </p>
-            <motion.a 
-              href="https://calendly.com" 
-              className="button cta-button" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              Schedule Your Free Discovery Call
-            </motion.a>
-          </motion.div>
+            Schedule a free discovery call to see how ForgeAI can transform your practice with intelligent automation
+          </motion.p>
+        </motion.div>
+        
+        <motion.div 
+          className="booking-calendly"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+        >
+          <div className="calendly-container">
+            <div className="calendly-inline-widget" style={{ minWidth: '320px', height: '650px' }}></div>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -1,31 +1,42 @@
-import { FaCalendarCheck, FaHeadset, FaChartLine, FaRobot } from 'react-icons/fa';
+import React from 'react';
 import { motion } from 'framer-motion';
+import { FaRobot, FaComments, FaFilter, FaUserCheck } from 'react-icons/fa';
 
 const Features = () => {
-  const featuresList = [
-    {
-      icon: <FaCalendarCheck />,
-      title: 'Automated Scheduling',
-      description: 'AI voice agents handle appointment booking, confirmations, and rescheduling, reducing no-shows and filling your calendar efficiently.'
-    },
-    {
-      icon: <FaHeadset />,
-      title: 'Intelligent Lead Management',
-      description: 'Capture and nurture leads automatically with AI-powered follow-ups and personalized messaging.'
-    },
-    {
-      icon: <FaChartLine />,
-      title: 'Optimized Patient Retention',
-      description: 'Maintain strong patient relationships with timely follow-ups, recall reminders, and satisfaction surveys.'
-    },
+  // Stats for AI Sales Team section
+  const stats = [
+    { value: '24/7', label: 'Lead Response' },
+    { value: '89%', label: 'Engagement Rate' },
+    { value: '3x', label: 'More Booked Appointments' },
+    { value: '67%', label: 'Cost Reduction' }
+  ];
+
+  // Features data
+  const features = [
     {
       icon: <FaRobot />,
-      title: 'CRM Integration',
-      description: 'Seamlessly connect with existing systems using VAPI, Twilio, and Make.com to create a streamlined workflow.'
+      title: 'Instant Response',
+      description: 'Engage potential patients within seconds, any time, any channel'
+    },
+    {
+      icon: <FaComments />,
+      title: 'Multi-Channel Presence',
+      description: 'Connect via Email, WhatsApp, SMS, and Website - simultaneously'
+    },
+    {
+      icon: <FaFilter />,
+      title: 'Smart Qualification',
+      description: 'AI filters and qualifies leads based on your clinic criteria'
+    },
+    {
+      icon: <FaUserCheck />,
+      title: 'Automated Follow-up',
+      description: 'Never lose a patient to poor follow-up again'
     }
   ];
 
-  const containerVariants = {
+  // Animation variants for scrolling effects
+  const sectionVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -37,73 +48,108 @@ const Features = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 80,
-        damping: 12
-      }
-    }
-  };
-
-  const iconVariants = {
-    hidden: { scale: 0, rotate: -180 },
-    visible: { 
-      scale: 1, 
-      rotate: 0,
-      transition: {
-        type: "spring",
-        stiffness: 260,
-        damping: 20
-      }
-    }
+    visible: { opacity: 1, y: 0 }
   };
 
   return (
-    <section className="features section" id="features">
+    <section id="advantages" className="advantages">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-center">AI Solutions for Modern Dental Practices</h2>
-          <p className="text-center" style={{ maxWidth: '700px', margin: '0 auto var(--spacing-xl)' }}>
-            Our AI automation tools are specifically designed to solve key pain points for dental clinics, freeing up your staff and improving patient experience.
-          </p>
-        </motion.div>
-        
+        {/* AI Sales Team Section */}
         <motion.div 
-          className="feature-cards"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          className="ai-sales-team"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7 }}
         >
-          {featuresList.map((feature, index) => (
-            <motion.div 
-              className="feature-card" 
-              key={index}
-              variants={itemVariants}
-              whileHover={{ 
-                scale: 1.03, 
-                boxShadow: 'var(--shadow-md)',
-                transition: { duration: 0.2 } 
-              }}
-            >
+          <motion.h2 
+            className="section-title"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
+            Your AI Dental Assistant
+            <span className="highlight"> Never Sleeps</span>
+          </motion.h2>
+
+          <motion.div 
+            className="stats-grid"
+            variants={sectionVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            {stats.map((stat, index) => (
               <motion.div 
-                className="feature-icon"
-                variants={iconVariants}
+                key={index} 
+                className="stat-card"
+                variants={itemVariants}
+                transition={{ duration: 0.5 }}
               >
-                {feature.icon}
+                <h3 className="stat-value">{stat.value}</h3>
+                <p className="stat-label">{stat.label}</p>
               </motion.div>
-              <h3 className="feature-title">{feature.title}</h3>
-              <p className="feature-description">{feature.description}</p>
-            </motion.div>
-          ))}
+            ))}
+          </motion.div>
+        </motion.div>
+
+        {/* AI-Driven Solutions Section */}
+        <motion.div 
+          className="ai-solutions"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7 }}
+        >
+          <motion.div 
+            className="section-header"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <motion.span 
+              className="section-tag"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+            >
+              AI-Driven Solutions
+            </motion.span>
+            <motion.h2 
+              className="section-title"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+            >
+              to Transform Your Dental Practice
+            </motion.h2>
+          </motion.div>
+
+          <motion.div 
+            className="features-grid"
+            variants={sectionVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            {features.map((feature, index) => (
+              <motion.div 
+                key={index} 
+                className="feature-card"
+                variants={itemVariants}
+                transition={{ duration: 0.5 }}
+                whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(0,0,0,0.15)' }}
+              >
+                <div className="feature-icon">{feature.icon}</div>
+                <h3 className="feature-title">{feature.title}</h3>
+                <p className="feature-description">{feature.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </motion.div>
       </div>
     </section>
