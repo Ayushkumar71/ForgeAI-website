@@ -19,14 +19,14 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
+ 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   const navLinks = [
     { name: 'Advantages', href: '#advantages' },
-    { name: 'Checklist', href: '#checklist' },
+    { name: 'Checklist', href: '#process' },
     { name: 'Testimonials', href: '#testimonials' },
   ];
  
@@ -38,13 +38,15 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
     >
       <div className="container navbar-container">
+        {/* logo here @devesh */}
+        {/* <img className="navbar-logo img" src="" alt="" href=""/> */}
+        {/* Link /public/logo3.png here */}
         <motion.a 
           href="/" 
           className="navbar-logo"
-          whileHover={{ scale: 1.05 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        >
-          Forge<span>AI</span>
+          whileHover={{ scale: 1.12 }}
+          transition={{ type: "spring", stiffness: 100, damping: 3 }}
+        >ForgeAI
         </motion.a>
         
         <motion.div 
@@ -96,13 +98,13 @@ const Navbar = () => {
           Book a Call
         </motion.a>
 
-        <motion.button 
+        {/* <motion.button 
           className="mobile-menu-btn" 
           onClick={toggleMenu}
           whileTap={{ scale: 0.9 }}
         >
           {isMenuOpen ? <FaTimes /> : <FaBars />}
-        </motion.button>
+        </motion.button> */}
       </div>
 
       <AnimatePresence>

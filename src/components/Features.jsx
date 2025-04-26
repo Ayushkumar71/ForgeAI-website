@@ -70,7 +70,7 @@ const Features = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
           >
             Your AI Dental Assistant
-            <span className="highlight"> Never Sleeps</span>
+            <span className="highlight">&nbsp;Never Sleeps</span>
           </motion.h2>
 
           <motion.div 

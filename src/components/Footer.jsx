@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 const Footer = () => {
   // TODO: Replace '#' with actual social media links
   const socialLinks = [
-    { name: 'Twitter', icon: FaTwitter, href: '#' },
-    { name: 'LinkedIn', icon: FaLinkedin, href: '#' },
-    { name: 'Facebook', icon: FaFacebook, href: '#' },
-    { name: 'Email', icon: FaEnvelope, href: 'mailto:info@dentalai.com' },
+    { name: 'Twitter', icon: FaTwitter, href: 'https://x.com/Ayushk71' },
+    { name: 'LinkedIn', icon: FaLinkedin, href: 'https://www.linkedin.com/in/ayush-kumar-3a83b2215/' },
+    { name: 'Facebook', icon: FaFacebook, href: 'https://www.facebook.com/ayush.ayushkumar.980/' },
+    { name: 'Email', icon: FaEnvelope, href: 'mailto:ayush11092003@gmail.com' },
   ];
 
   return (

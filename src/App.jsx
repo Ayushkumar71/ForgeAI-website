@@ -20,7 +20,8 @@ function App() {
         <Hero />
         <Features />
         <ProcessSteps />
-        <TrustedBy />
+        {/* We Dont need lies */}
+        {/* <TrustedBy /> */}
         <Comparison />
         <Testimonials />
         <Booking />

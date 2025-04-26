@@ -8,7 +8,7 @@ const Booking = () => {
     script.innerHTML = `
       window.onload = function() {
         Calendly.initInlineWidget({
-          url: 'https://calendly.com/forge-ai/demo',
+          url: 'https://calendly.com/ayush11092003/30min',
           parentElement: document.querySelector('.calendly-inline-widget'),
           prefill: {},
           utm: {}

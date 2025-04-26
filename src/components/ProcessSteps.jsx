@@ -10,7 +10,7 @@ const ProcessSteps = () => {
     },
     {
       number: 2,
-      title: 'Business Analysis & Strategy',
+      title: 'Analysis & Strategy',
       description: 'We analyze your operations, identify gaps, and propose a customized AI automation strategy.'
     },
     {
@@ -20,7 +20,7 @@ const ProcessSteps = () => {
     },
     {
       number: 4,
-      title: 'Implementation & Onboarding',
+      title: 'Onboarding',
       description: 'Once approved, we implement the full solution and provide comprehensive onboarding.'
     }
   ];
@@ -78,6 +78,7 @@ const ProcessSteps = () => {
               variants={itemVariants}
             >
               <div className="step-number">{step.number}</div>
+              <br />
               <h3 className="step-title">{step.title}</h3>
               <p className="step-description">{step.description}</p>
             </motion.div>

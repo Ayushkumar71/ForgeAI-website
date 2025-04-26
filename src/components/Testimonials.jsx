@@ -5,41 +5,42 @@ const Testimonials = () => {
   // Testimonials data
   const testimonials = [
     {
-      text: "Implementing ForgeAI has transformed our dental practice. Our appointment bookings increased by 30% and staff can focus on patient care instead of admin tasks.",
-      name: "Dr. Sarah Johnson",
-      role: "Dentist, Bright Smile Dental",
-      location: "Boston, MA"
+      text: "After just one consultation with ForgeAI, we gained clarity on how to streamline operations and prep for growth. While we intentionally limit patient volume to focus on high-value care, I’d definitely recommend this service to clinics planning to scale. It’s a must if you’re handling high footfall and want to maintain quality without burning out your team.",
+      name: "Dr. Pooja Agarwal",
+      role: "Orthodontist, Dental Health & Implant Center",
+      location: "New Delhi, India"
     },
-    {
-      text: "The AI voice agent is incredible! It handles all our scheduling, follow-ups, and reminders without our front desk having to lift a finger. Patients love it too.",
-      name: "Michael Torres",
-      role: "Practice Manager",
-      location: "Miami, FL"
-    },
-    {
-      text: "I was skeptical about AI for our practice, but after seeing how seamlessly it integrated with our existing systems, I'm a believer. Best investment we've made.",
-      name: "Dr. James Chen",
-      role: "Orthodontist",
-      location: "San Francisco, CA"
-    },
-    {
-      text: "Our no-show rate has dropped by 65% since implementing ForgeAI. The automated reminders and rescheduling features have been a game-changer for us.",
-      name: "Emily Parker",
-      role: "Office Manager",
-      location: "Chicago, IL"
-    },
-    {
-      text: "We've tried several scheduling solutions, but ForgeAI's integration with our practice management software made it the clear winner. Highly recommend!",
-      name: "Dr. Robert Williams",
-      role: "Dental Practice Owner",
-      location: "Denver, CO"
-    },
-    {
-      text: "The lead qualification system has dramatically improved our conversion rate. We're getting better patients who are ready to commit to treatment.",
-      name: "Jessica Thompson",
-      role: "Marketing Director",
-      location: "Austin, TX"
-    }
+    // {
+    //   text: "The AI voice agent is incredible! It handles all our scheduling, follow-ups, and reminders without our front desk having to lift a finger. Patients love it too.",
+    //   name: "Michael Torres",
+    //   role: "B2B Owner",
+    //   location: "Dwarka, India"
+    // },
+    // {
+    //   text: "I was skeptical about AI for our practice, but after seeing how seamlessly it integrated with our existing systems, I'm a believer. Best investment we've made.",
+    //   name: "Dr. James Chen",
+    //   role: "Orthodontist",
+    //   location: "San Francisco, CA"
+    // }
+    // ,
+    // {
+    //   text: "Our no-show rate has dropped by 65% since implementing ForgeAI. The automated reminders and rescheduling features have been a game-changer for us.",
+    //   name: "Emily Parker",
+    //   role: "Office Manager",
+    //   location: "Chicago, IL"
+    // },
+    // {
+    //   text: "We've tried several scheduling solutions, but ForgeAI's integration with our practice management software made it the clear winner. Highly recommend!",
+    //   name: "Dr. Robert Williams",
+    //   role: "Dental Practice Owner",
+    //   location: "Denver, CO"
+    // },
+    // {
+    //   text: "The lead qualification system has dramatically improved our conversion rate. We're getting better patients who are ready to commit to treatment.",
+    //   name: "Jessica Thompson",
+    //   role: "Marketing Director",
+    //   location: "Austin, TX"
+    // }
   ];
 
   // Animation variants
