@@ -31,7 +31,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            Helping dental clinics scale their business with Voice agents & Chat agents in their CRM
+            Increase Patient Bookings by <b>30%</b> and Reduce Admin Work by <b>50%</b> with <i>Our AI Dental Assistant</i>
           </motion.p>
           
           <motion.div 

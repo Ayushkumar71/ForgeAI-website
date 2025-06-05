@@ -20,7 +20,7 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.1, duration: 0.6 }}
         >
-          <p>&copy; {new Date().getFullYear()} DentalAI. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} ForgeAI. All rights reserved.</p>
           <div className="footer-social-minimal">
             {socialLinks.map((social, index) => (
               <motion.a 

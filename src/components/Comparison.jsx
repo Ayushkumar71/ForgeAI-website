@@ -5,22 +5,21 @@ import { FaTimes, FaCheck } from 'react-icons/fa';
 const Comparison = () => {
   // Comparison data
   const withoutAI = [
-    'Inconsistent Lead Follow-Up',
-    'Missed Opportunities',
-    'Time-Consuming Manual Processes',
-    'Frustration and Stress',
-    'Constant back and forth with prospects',
-    'Wasted time on Unqualified leads'
+    'Losing Revenue to Missed Calls',
+    'Sinking Hours into Manual Follow-Ups',
+    'Turning Away Patients with Slow Responses',
+    'Wasting Time on Unqualified Leads',
+    'Guessing Why Patients Don’t Book',
+    'Feeling Overwhelmed by Admin Chaos'
   ];
 
   const withAI = [
-    'Leads instantly contacted',
-    'Automatically Qualified Pipeline',
-    'No more email chains going back and forth',
-    '24/7 Lead support',
-    'Objections handled instantly',
-    'No more Hiring and Training',
-    'Peace of Mind to Grow'
+    'Capture Every Call—Book More Patients Instantly',
+    'Slash Follow-Up Time by 50% with Smart Automation',
+    'Win Patients with 24/7 Instant Responses',
+    'Focus on High-Value Patients with AI-Qualified Leads',
+    'Unlock Insights from Every Call to Boost Conversions',
+    'Reclaim Your Day with Seamless, Stress-Free Operations'
   ];
 
   // Animation variants
@@ -49,8 +48,9 @@ const Comparison = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
+        <span className="section-tag"></span>
           <p className="comparison-context">
-            It's the difference between the businesses that struggle to fill their calendars and those that have a consistent stream of high-quality appointments!
+            It's the difference between the businesses that struggle to fill their calendars and those that have a <i>consistent stream of <b>high-quality appointments!</b></i>
           </p>
         </motion.div>
 

@@ -17,7 +17,7 @@ function App() {
     <>
       <Navbar />
       <main>
-        <Hero />
+        <Hero /> 
         <Features />
         <ProcessSteps />
         {/* We Dont need lies */}

@@ -55,7 +55,7 @@ const ProcessSteps = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="section-tag">How It Works</span>
+          <span className="section-tag">The Roadmap</span>
           <h2 className="section-title">
             Our Simple 4-Step Process
           </h2>

@@ -76,7 +76,7 @@ const Testimonials = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            AI-Driven Solutions
+            Success Stories
           </motion.span>
           <motion.h2 
             className="section-title"
@@ -85,7 +85,7 @@ const Testimonials = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            to Transform Your Dental Practice
+            Transforming Dental Practices
           </motion.h2>
         </motion.div>
 
@@ -96,8 +96,9 @@ const Testimonials = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.4 }}
         >
-          <h3 className="stories-heading">Success Stories</h3>
-          <p className="stories-subheading">Explore how ForgeAI has transformed dental practices for our clients.</p>
+          {/* Removed by @ayush */}
+          {/* <h3 className="stories-heading">Success Stories</h3> */}
+          <p className="stories-subheading">Explore how We have <i><b>Transformed dental practices</b></i> for our clients.</p>
           
           <motion.div 
             className="testimonials-grid"

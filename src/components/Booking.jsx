@@ -8,7 +8,7 @@ const Booking = () => {
     script.innerHTML = `
       window.onload = function() {
         Calendly.initInlineWidget({
-          url: 'https://calendly.com/ayush11092003/30min',
+          url: 'https://cal.com/ayush-forgeai',
           parentElement: document.querySelector('.calendly-inline-widget'),
           prefill: {},
           utm: {}
@@ -41,7 +41,7 @@ const Booking = () => {
           >
             Ready to<br/>
             <span className="highlight">Revolutionize</span> Your<br/>
-            Dental Practice <span className="highlight">with AI?</span>
+            Dental Practice <span className="highlight">with our Guarentee?</span>
           </motion.h2>
           
           <motion.p 
@@ -51,7 +51,7 @@ const Booking = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            Schedule a free discovery call to see how ForgeAI can transform your practice with intelligent automation
+            If you don’t see a <b>20%</b> increase in bookings within <b>90 days</b>, we'll<i> refund your investment.</i>
           </motion.p>
         </motion.div>
         

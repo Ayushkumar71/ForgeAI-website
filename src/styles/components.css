@@ -88,7 +88,7 @@ section {
 .section-tag {
   display: inline-block;
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.45rem;
   font-weight: var(--body-weight-bold);
   color: var(--color-accent-primary);
   margin-bottom: var(--space-3);
@@ -1119,9 +1119,9 @@ section {
 
 .section-tag {
   font-family: var(--font-body);
-  font-size: 1.125rem;
+  font-size: 1.325rem;
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--color-accent-primary);
   margin-bottom: 1rem;
   display: block;
 }
@@ -1137,13 +1137,14 @@ section {
 }
 
 .section-title .highlight {
-  color: var(--color-accent);
+  color: var(--color-accent-solid);
+  font-family: 'Archivo', sans-serif;
 }
 
 /* AI Sales Team Section */
 .ai-sales-team {
+  margin-top: 80px;
   text-align: center;
-  margin-bottom: 100px;
 }
 
 .stats-grid {
@@ -1188,7 +1189,7 @@ section {
 
 /* AI Solutions Section */
 .ai-solutions {
-  margin-top: 80px;
+  margin-bottom: 100px;
 }
 
 .features-grid {
@@ -1422,11 +1423,12 @@ section {
   margin-left: auto;
   margin-right: auto;
 }
-
+/* changed repeat from 3 to 1 By @ayush */
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 24px;
+  margin: 0vw 7vw 0vw 7vw;
 }
 
 .testimonial-card {
@@ -1435,6 +1437,7 @@ section {
   padding: 24px;
   transition: all 0.3s ease;
   height: 100%;
+  /* width: 30%; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1495,10 +1498,10 @@ section {
   opacity: 0.8;
 }
 
-/* Responsive styles for Testimonials */
+/* Responsive styles for Testimonials - changed repeat from 2 to 1 By @ayush*/
 @media screen and (max-width: 1200px) {
   .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
 }
